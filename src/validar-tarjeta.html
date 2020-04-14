@@ -32,7 +32,7 @@
 
 <section>
 <h2>Valida tu tarjeta</h2>
-<p>Ingresa los datos de tu tarjetanpara realizar la compra</p><br>
+<p>Ingresa los datos de tu tarjeta para realizar la compra</p><br>
 
 <h3>Tu tarjeta</h3>
 <ul>
@@ -52,7 +52,13 @@
 				  <h2 id="error"></h2>
 				  
 				</div>
-			  <input type="button" value="Confirmar" id="confirmarbtn" onclick="validacion()">
+				<div style="display:none" id="numeroErroneoTarjeta">
+					<h3 id="errorNumero"></h3>
+				</div>
+				<div style="display:none" id="numeroCorrectoTarjeta">
+					<h4 id="tarjetaCorrecta"></h4>
+				</div>
+			  <input type="button" value="Confirmar" id="confirmarbtn" >
 			  <input type="button" value="Volver" id="volverbtn" > 
 		
 		</form><br>

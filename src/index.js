@@ -1,5 +1,7 @@
 import validator from './validator.js'; //Importamos el objeto validator del otro archivo JS
 
+//git push origin master:gh-pages
+
 //Botones 
 let botonConfirmar=document.getElementById("confirmarbtn");
 let botonVolver=document.getElementById("volverbtn");
@@ -23,25 +25,33 @@ botonConfirmar.addEventListener("click",function(){ //Funcion para validar campo
          creditCardNumber=numeroParaComprobar; //Guardamos los numeros en la variable
          
          if(validator.isValid(creditCardNumber)==true){ //Si es un numero de tarjeta valido
-            alert("funciona"); //borrar despues
+            
             numeroEnmascarado=validator.maskify(creditCardNumber); //Enmascaramos los digitos con #
-            alert(numeroEnmascarado); //Borrar despues
+            
             //Aqui redirigir a la ultima pantalla html y mostrar el digito oculto con # al usuario
+
+           
+            document.getElementById("tarjetaCorrecta").innerHTML = "Su tarjeta numero "+numeroEnmascarado+" ha realizado la compra con éxito";
+            document.getElementById("numeroCorrectoTarjeta").style.display = "block";
+
             
          }
          if(validator.isValid(creditCardNumber)==false){
-            alert("numerofalso"); //Borrar despues
+            
             numeroEnmascarado=validator.maskify(creditCardNumber); //Enmascaramos los digitos con #
-            alert(numeroEnmascarado); //Borrar despues
+            
             document.getElementById("error").innerHTML = "Ingrese numero de tarjeta valido";
             document.getElementById("mensajeError").style.display = "block"; //Mostrar en la pagina mensaje de error
+            document.getElementById("errorNumero").innerHTML = "Numero "+numeroEnmascarado+" no es correcto";
+            document.getElementById("numeroErroneoTarjeta").style.display = "block";
+            
          }
     }
 });
 
 //Boton para volver
 botonVolver.addEventListener("click",function(){ //Boton para volver a pagina anterior
-
+    location.href="index.html";
 });
 
 
