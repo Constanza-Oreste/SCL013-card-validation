@@ -29,7 +29,7 @@ para comprobar si los dígitos que ingresa un usuario de una tarjeta de crédito
 no, ocultando los caracteres y verificando que sólo puedan ingresarse números en el formulario. 
 
 ## 2. Imagen del proyecto
-![Formulario de la tarjeta de crédito](formularioTarjeta.png)
+![Formulario de la tarjeta de crédito](/img/formularioTarjeta.png)
 
 ## 3. Investigación UX
 
