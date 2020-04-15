@@ -4,7 +4,7 @@ const validator = { //Objeto validator
     //Metodo para comprobar numero tarjeta usando el algoritmo de Luhn
     isValid(creditCardNumber) {
 
-        let arregloNumeros = new Array(10); //Creamos un arreglo para guardar los numeros
+        let arregloNumeros = new Array(16); //Creamos un arreglo para guardar los numeros
         let totalNumeros = 0; //Inicializamos la variable para sumar los numeros del arreglo
 
         arregloNumeros = creditCardNumber.split("");
